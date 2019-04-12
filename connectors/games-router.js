@@ -80,7 +80,7 @@ router.put("/:id", async (req, res) => {
       const game = await Games.getById(id);
       res.status(200).json(game);
     } else {
-      res.status(200).json({ message: "Game not found." });
+      res.status(404).json({ message: "Game not found." });
     }
   } catch (error) {
     res.status(500).json(error);
