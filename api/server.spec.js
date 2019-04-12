@@ -68,7 +68,7 @@ describe("server.js", () => {
       expect(res.status).toBe(200);
     });
 
-    it("should return status 500", async () => {
+    it("should return status 404", async () => {
       await db("games").insert({
         title: "Halo",
         genre: "Shooter",
